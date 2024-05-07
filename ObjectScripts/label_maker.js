@@ -8,10 +8,12 @@ let object = {
     zip: "30083"
 }
 
-function labelMaker(object) {
-    console.log(object.name);
-    console.log(object.address);
-    console.log(object.city + ', ' + object.state + ' ' + object.zip);
+labelMaker(object);
+
+
+function labelMaker(contact) {
+    console.log(contact.name);
+    console.log(contact.address);
+    console.log(contact.city + ', ' + contact.state + ' ' + contact.zip);
 }
 
-labelMaker(object);
