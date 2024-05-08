@@ -82,17 +82,17 @@ let vehicles = [
 // console.log(`The Vehicles with Red color are the ones with license plate of: ${whichVehiclesAreRed}`);
 
 
-let expiredVehicles = [];
+let registrationExpiredVehicles = [];
 
 let currentDate = new Date(); 
 
 for (let i = 0; i < numOfArray; i++) {
     let vehicle = vehicles[i];
     if (vehicle.registrationExpires < currentDate) {
-        expiredVehicles.push(vehicles[i].licenseNo)
+        registrationExpiredVehicles.push(vehicles[i].licenseNo)
     }
 }
-// console.log(`Vehicle with license no: ${expiredVehicles} has expired registration.`);
+// console.log(`Vehicle with license no: ${registrationExpiredVehicles} has expired registration.`);
 
 let vehicleCapacity = [];
 
@@ -104,11 +104,17 @@ for(let i = 0; i < numOfArray; i ++) {
 }
 // console.log(`The vehicles that has atleast 6 seats are with the following license numbers: ${vehicleCapacity}`);
 
-for (let i = 0; i < numOfArray; i++) {
 
-    let vehicle = vehicles[i];
+let whichVehiclesHasEndLicensePlates = [];
 
-    if (vehicle.licenseNo.endsWith("222")) {
-        // console.log(`Vehicle with license no: ${vehicle.licenseNo} has a plate number ending in '222'.`);
+for(let i = 0; i<numOfArray; i++){
+    let licensePlate = vehicles[i].licenseNo
+    let licensePlateIndex = licensePlate.indexOf("-")
+    let lastLicensePlate = licensePlate.substring(licensePlateIndex+1)
+    // console.log(`${lastLicensePlate}   ${licensePlate}`);
+    if(lastLicensePlate == "222"){
+        let value = `Vehicle with License No: ${licensePlate} has a plate number ending in "222"`
+        whichVehiclesHasEndLicensePlates.push(value)
     }
-};
+}
+// console.log(whichVehiclesHasEndLicensePlates);

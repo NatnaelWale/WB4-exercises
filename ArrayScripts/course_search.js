@@ -47,7 +47,7 @@ let courses = [
         CourseStartDate.push(courses[i].StartDate)
     }
 };
-console.log(`The course PROG200 start date is: ${CourseStartDate[0]}`);
+// console.log(`The course PROG200 start date is: ${CourseStartDate[0]}`);
 
    let titleOfCourse = [];
 
@@ -56,7 +56,7 @@ console.log(`The course PROG200 start date is: ${CourseStartDate[0]}`);
         titleOfCourse.push(courses[i].Title)
     }
 };
-console.log(`The course PROJ500 title is: ${titleOfCourse[0]}`);
+// console.log(`The course PROJ500 title is: ${titleOfCourse[0]}`);
 
    let listOfCourse = [];
 
@@ -73,4 +73,4 @@ console.log(`The courses title that cost less than or equal to $50 are: ${listOf
         classRoom1.push(courses[i].Title)
     }
    };
-console.log(`The courses that meet in classroom 1 are: ${classRoom1}`);
+// console.log(`The courses that meet in classroom 1 are: ${classRoom1}`);
