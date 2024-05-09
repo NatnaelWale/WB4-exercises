@@ -70,8 +70,8 @@ for (let i = 0; i < numOfActors; i++) {
     // Check each film in the member's films array
     for (let j = 0; j < member.films.length; j++) {
         let film = member.films[j];
-        // If a film starts with 'A', log the member's name and the film
-        if (film.startsWith("A")) {
+        let filmsFirstLetter = film.substring(0,1);
+        if (filmsFirstLetter == "A") {
             console.log(`Member Name: ${member.name}, Film: ${film}`);
         }
     }

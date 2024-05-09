@@ -15,16 +15,16 @@ let products = [
    ];
  
    
-   let lessthanFourBucksCandles = [];
+   let lessthanFourBucksCandy = [];
  
    let numItems = products.length;
 
    for (let i = 0; i < numItems; i++) {
     if (products[i].price < 4.00) {
-        lessthanFourBucksCandles.push(products[i].product)
+        lessthanFourBucksCandy.push(products[i].product)
     }
    };
-// console.log(`The candles that cost less than four bucks are: ${lessthanFourBucksCandles}.`);
+// console.log(`The candles that cost less than four bucks are: ${lessthanFourBucksCandy}.`);
 
 let productsWithMandM = []
 
