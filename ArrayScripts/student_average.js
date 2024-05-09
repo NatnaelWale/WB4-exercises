@@ -9,27 +9,35 @@ let students = [
   { name: "Ezra", scores: [100, 99, 100, 87] },
 ];
 
-function studentAverages(studentArray) {
 //   console.log(studentArray);
-  for (let i = 0; i < studentArray.length; i++) {
-    let studentsScores = studentArray[i].scores;
-    // console.log(studentsScores);
-    function getAverage(score) {
-      let total = 0;
-      for (let i = 0; i < score.length; i++) {
-        total += score[i];
-      }
-      let average = total / score.length;
+for (let i = 0; i < students.length; i++) {
+  let studentsScores = students[i].scores;
+  // console.log(studentsScores);
+  function getAverage(score) {
+    let total = 0;
+    for (let j = 0; j < score.length; j++) {
+      total += score[j];
+    }
+    let average = total / score.length;
 
     //   console.log(average)
 
-      return average;
-    }
-    let avg  =  getAverage(studentsScores);
-    console.log(studentArray[i].name + " " + avg);
-    
+    return average;
+  }
+  let avg = getAverage(studentsScores);
+  console.log(students[i].name + " " + avg);
 }
 
-}
 
-studentAverages(students);
+console.log("-----------------new way-------------")
+
+
+for(let student of students){
+  let total = 0;
+  for(let score of student.scores){
+    total += score;
+  }
+  let average = total/student.scores.length
+
+  console.log(student.name + " " + average);
+}
