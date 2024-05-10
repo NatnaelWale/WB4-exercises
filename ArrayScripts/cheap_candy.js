@@ -29,15 +29,14 @@ let products = [
 let productsWithMandM = []
 
 for (let i = 0; i < numItems; i++) {
-    if (products[i].product == "M&M") {
+    let productName = products[i].product;
+    let indexOfMandMs = productName.indexOf("M&Ms");
+    if (indexOfMandMs >= 0) {
         productsWithMandM.push(products[i].product)
     }
 };
-if(productsWithMandM == "") {
-    console.log(`There is no candy that has "M&M" its name.`)
-} else {
-    console.log(`The candles that has M&Ms in their name are: ${productsWithMandM}.`);
-}
+console.log(`The candles that has M&Ms in their name are: ${productsWithMandM}.`)
+
 
 let checkIfWeHaveCandy = [];
 
